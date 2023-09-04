@@ -98,6 +98,7 @@ jobs:
           driver-opts: |
             image=moby/buildkit:master
             network=host
+            
       - name: Install cosign
         if: github.event_name != 'pull_request'
         uses: sigstore/cosign-installer@v3.1.2
