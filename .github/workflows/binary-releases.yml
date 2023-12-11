@@ -102,7 +102,7 @@ jobs:
         run: >-
           mkdir $PYAPP_REPO && curl -L https://github.com/ofek/pyapp/releases/download/v$PYAPP_VERSION/source.tar.gz | tar --strip-components=1 -xzf - -C $PYAPP_REPO
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Hatch
@@ -196,7 +196,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Pull latest change
