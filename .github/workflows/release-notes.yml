@@ -49,22 +49,22 @@ jobs:
       - name: Create release notes
         run: ./.github/actions/create_release_and_archive.sh ${{ inputs.tags }}
       - name: Download Python artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: python-artifacts
           path: dist
       - name: Download binaries
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: standalone
           path: archives
       - name: Download standalone MacOS
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: staged-MacOS
           path: archives
       - name: Download installers
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: installers
           path: installers
